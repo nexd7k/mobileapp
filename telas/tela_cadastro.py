@@ -27,31 +27,45 @@ def Cadastro(page: Page):
             txt_erro.visible = True
             page.update()
             return
-        if decider_value == "cliente": #Cadastrando cliente
-            cursor.execute("INSERT INTO Usuario (login, senha, cpf) VALUES (?, ?, ?)", (login.value, senha.value, cpf.value))
-        else: #Cadastrando advogado
-            cursor.execute("INSERT INTO Usuario (login, senha, cpf, oab) VALUES (?, ?, ?, ?)", [login.value, senha.value, cpf.value, oab.value])
-        conn.commit()
+        
+        # Verificando se uma opção foi selecionada
+        if decider_value is None:
+            txt_erro.visible = True
+            txt_erro.content.value = "Por favor, selecione se você é cliente ou advogado"
+            page.update()
+            return
+        
+        try: 
+            if decider_value == "cliente": #Cadastrando cliente
+                cursor.execute("INSERT INTO Usuario (login, senha, cpf) VALUES (?, ?, ?)", (login.value, senha.value, cpf.value))
+            else: #Cadastrando advogado
+                cursor.execute("INSERT INTO Usuario (login, senha, cpf, oab) VALUES (?, ?, ?, ?)", [login.value, senha.value, cpf.value, oab.value])
+            conn.commit()
 
-        usuario1 = cursor.execute("SELECT * FROM Usuario WHERE login = ? AND cpf = ?", (login.value, cpf.value)) #Buscando o usuário no banco
-        usuario1 = cursor.fetchone()
+            usuario1 = cursor.execute("SELECT * FROM Usuario WHERE login = ? AND cpf = ?", (login.value, cpf.value)) #Buscando o usuário no banco
+            usuario1 = cursor.fetchone()
 
-        page.session.set("user", usuario1)
+            page.session.set("user", usuario1)
 
-        txt_acerto.visible = True
-        login.value= ''
-        cpf.value = ''
-        senha.value = ''
-        oab.value = ''
-        page.update()
+            txt_acerto.visible = True
+            login.value= ''
+            cpf.value = ''
+            senha.value = ''
+            oab.value = ''
+            page.update()
 
-        sleep(1) #Esperar 1 segundo antes de ir pra proxima tela
+            sleep(1) #Esperar 1 segundo antes de ir pra proxima tela
 
-        if decider_value == "cliente":
-            page.go("/complementocliente")
-        else:
-            page.go("/complementoadvogado")
-
+            if decider_value == "cliente":
+                page.go("/complementocliente")
+            else:
+                page.go("/complementoadvogado")
+                
+        except sqlite3.IntegrityError:
+            txt_erro.visible = True
+            txt_erro.content.value = "Login já está em uso"
+            page.update()
+            
 
     #Definindo todas as variáveis e aplicando routing no botao voltar
     btn_voltar = Container(ElevatedButton('Voltar', on_click=lambda _: page.go("/"), height=50, width=110))

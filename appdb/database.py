@@ -10,7 +10,7 @@ def tabela_user():
         '''
         CREATE TABLE IF NOT EXISTS Usuario (
             id INTEGER PRIMARY KEY AUTOINCREMENT,
-            login CHAR(20),
+            login CHAR(20) UNIQUE,
             nome CHAR(50),
             idade INTEGER,
             cpf CHAR(15),

@@ -72,7 +72,7 @@ def main(page: Page):
                 View(
                     '/',
                     [
-                        AppBar(title=Text("Tela de Login"), bgcolor=colors.BLUE),
+                        AppBar(title=Text("Login"), bgcolor=colors.BLUE),
                         Login(page)
                     ], scroll = ScrollMode.AUTO
                 )
@@ -84,7 +84,7 @@ def main(page: Page):
                 View(
                     '/cadastro',
                     [
-                        AppBar(title=Text("Tela de Cadastro"), bgcolor=colors.BLUE),
+                        AppBar(title=Text("Cadastro"), bgcolor=colors.BLUE),
                         Cadastro(page),
                     ], scroll = ScrollMode.AUTO
                 )
@@ -95,7 +95,7 @@ def main(page: Page):
                 View(
                     '/atualizarcliente',
                     [
-                    AppBar(IconButton(icon = icons.ARROW_BACK, on_click=lambda _: page.go("/perfilcliente")), title=Text("Cadastro"), bgcolor=colors.GREEN),
+                    AppBar(IconButton(title = ("Atualizar"), icon = icons.ARROW_BACK, on_click=lambda _: page.go("/perfilcliente")), title=Text("Cadastro"), bgcolor=colors.BLUE),
                     AtualizarCliente(page)
                     ], scroll = ScrollMode.AUTO
                 )
@@ -106,7 +106,7 @@ def main(page: Page):
                 View(
                     '/atualizaradvogado',
                     [
-                    AppBar(IconButton(icon = icons.ARROW_BACK, on_click=lambda _: page.go("/advogado")), title=Text("Cadastro"), bgcolor=colors.GREEN),
+                    AppBar(IconButton(title = ("Atualizar"), icon = icons.ARROW_BACK, on_click=lambda _: page.go("/advogado")), title=Text("Cadastro"), bgcolor=colors.BLUE),
                     AtualizarAdvogado(page)
                     ], scroll = ScrollMode.AUTO
                 )
@@ -117,7 +117,7 @@ def main(page: Page):
                 View(
                     '/complementocliente',
                     [
-                    AppBar(title=Text("Cadastro"), bgcolor=colors.GREEN),
+                    AppBar(title=Text("Cadastro"), bgcolor=colors.BLUE),
                     ComplementarCliente(page)
                     ], scroll = ScrollMode.AUTO
                 )
@@ -128,7 +128,7 @@ def main(page: Page):
                 View(
                     '/complementoadvogado',
                     [
-                    AppBar(title=Text("Cadastro"), bgcolor=colors.AMBER),
+                    AppBar(title=Text("Cadastro"), bgcolor=colors.BLUE),
                     ComplementarAdvogado(page)
                     ], scroll = ScrollMode.AUTO
                 )
@@ -139,7 +139,7 @@ def main(page: Page):
                 View(
                     '/advogado',
                     [
-                        AppBar(title=Text("Advogado"), bgcolor=colors.RED, actions= [menuadv]),
+                        AppBar(title=Text("Home"), bgcolor=colors.BLUE, actions= [menuadv]),
                         Advogado(page),
                         bar_item_adv(page)
                     ], scroll = ScrollMode.AUTO
@@ -151,7 +151,7 @@ def main(page: Page):
                 View(
                     '/cliente',
                     [
-                        AppBar(bgcolor=colors.BLUE),
+                        AppBar(title=Text("Home"), bgcolor=colors.BLUE),
                         Cliente(page),
                         bar_item_cli(page)
                     ], scroll = ScrollMode.AUTO
@@ -187,7 +187,7 @@ def main(page: Page):
                 View(
                     '/perfilcliente',
                     [
-                    AppBar(title=Text("Perfil de Cliente"), bgcolor=colors.RED, actions= [menucli]),
+                    AppBar(title=Text("Perfil"), bgcolor=colors.BLUE, actions= [menucli]),
                     PerfilCliente(page),
                     bar_item_cli(page)
                     ], scroll = ScrollMode.AUTO
