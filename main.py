@@ -95,7 +95,7 @@ def main(page: Page):
                 View(
                     '/atualizarcliente',
                     [
-                    AppBar(IconButton(title = ("Atualizar"), icon = icons.ARROW_BACK, on_click=lambda _: page.go("/perfilcliente")), title=Text("Cadastro"), bgcolor=colors.BLUE),
+                    AppBar(IconButton(icon = icons.ARROW_BACK, on_click=lambda _: page.go("/perfilcliente")), title=Text("Atualizar"), bgcolor=colors.BLUE),
                     AtualizarCliente(page)
                     ], scroll = ScrollMode.AUTO
                 )
@@ -106,7 +106,7 @@ def main(page: Page):
                 View(
                     '/atualizaradvogado',
                     [
-                    AppBar(IconButton(title = ("Atualizar"), icon = icons.ARROW_BACK, on_click=lambda _: page.go("/advogado")), title=Text("Cadastro"), bgcolor=colors.BLUE),
+                    AppBar(IconButton(icon = icons.ARROW_BACK, on_click=lambda _: page.go("/advogado")), title=Text("Atualizar"), bgcolor=colors.BLUE),
                     AtualizarAdvogado(page)
                     ], scroll = ScrollMode.AUTO
                 )

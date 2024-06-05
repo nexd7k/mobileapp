@@ -14,7 +14,8 @@ def TelaCrime(page: Page):
                            border_radius= border_radius.all(50)), alignment=alignment.center, padding=25, margin= margin.only(top=20))
     #Descrição do advogado
     txt_dados = Container(Text("Dra. Marcela é uma advocada especializada em Crimes, porém também trabalha com Indenização. \n"
-                               "Conhecida por sua expertise legal e empatia excepcional com os clientes.", 
+                               "Conhecida por sua expertise legal e empatia excepcional com os clientes. \n"
+                               "Contato \n Telefone: (11) 91111-2222 \n Email: dramarcela123@gmail.com", 
                                text_align = TextAlign.CENTER), alignment= alignment.center)
 
     return Column(

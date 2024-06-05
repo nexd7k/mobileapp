@@ -14,7 +14,8 @@ def TelaInden(page: Page):
                            border_radius= border_radius.all(50)), alignment=alignment.center, padding=25, margin= margin.only(top=20))
     #Descrição do advogado
     txt_dados = Container(Text("Dr. Otávio é um advogado especializado em Danos Morais, porém também trabalha com Indenização. \n"
-                               "Conhecido por sua expertise legal e empatia excepcional com os clientes.", 
+                               "Conhecido por sua expertise legal e empatia excepcional com os clientes. \n"
+                               "Contato \n Telefone: (11) 97777-8888 \n Email: drotavio123@gmail.com", 
                                text_align = TextAlign.CENTER), alignment= alignment.center)
 
     return Column(

@@ -37,9 +37,9 @@ def ComplementarAdvogado(page: Page):
     txt_nome = Container(Text('Nome: '))
     nome = TextField(label='Insira seu nome...', text_align=TextAlign.LEFT)
     txt_idade = Container(Text('Idade: '))
-    idade = TextField(label='Insira seu idade...', text_align=TextAlign.LEFT)
-    txt_pen = Container(Text("Direito Penal"), margin.only(top=25))
+    idade = TextField(label='Insira sua idade...', text_align=TextAlign.LEFT)
     #Checkboxes
+    txt_pen = Container(Text("Direito Penal"), margin.only(top=25))
     c_ind = Container(Checkbox(label="Indenização", value=False), margin.only(top=25))
     c_dam = Checkbox(label="Danos Morais", value=False)
     txt_civ = Container(Text("Direito Civil"), margin.only(top=25))

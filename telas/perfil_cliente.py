@@ -2,7 +2,7 @@ from flet import *
 from appdb.database import *
 
 def PerfilCliente(page: Page):
-    usuario1 = page.session.get("user")
+    usuario1 = page.session.get("user") #Buscando dados do usuario
     page.vertical_alignment = MainAxisAlignment.CENTER
     page.horizontal_alignment = CrossAxisAlignment.CENTER
 
