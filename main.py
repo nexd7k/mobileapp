@@ -235,7 +235,7 @@ def main(page: Page):
                 View(
                     '/telahom',
                     [
-                        AppBar(bgcolor=Colors.BLUE),
+                        AppBar(bgcolor=Colors.BLACK),
                         TelaHomicidios(page),
                         bar_item_cli(page)
                     ], scroll = ScrollMode.AUTO
