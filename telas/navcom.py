@@ -15,8 +15,8 @@ def bar_item_cli(page):
     #Fazendo a navbar 
     navitem = NavigationBar(on_change = lambda e:change_page(e,page),
                             destinations=[
-                                NavigationDestination(icon = icons.HOME, label="Home"),
-                                NavigationDestination(icon = icons.PERSON, label="Perfil")
+                                NavigationBarDestination(icon = Icons.HOME, label="Home"),
+                                NavigationBarDestination(icon = Icons.PERSON, label="Perfil")
                             ]
                             ) 
     return navitem
@@ -32,8 +32,8 @@ def bar_item_adv(page):
     #Fazendo a navbar 
     navitem = NavigationBar(on_change = lambda e:change_page(e,page),
                             destinations=[
-                                NavigationDestination(icon = icons.HOME, label="Home"),
-                                NavigationDestination(icon = icons.PERSON, label="Perfil")
+                                NavigationBarDestination(icon = Icons.HOME, label="Home"),
+                                NavigationBarDestination(icon = Icons.PERSON, label="Perfil")
                             ]
                             ) 
     return navitem

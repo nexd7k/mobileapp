@@ -39,8 +39,8 @@ def ComplementarCliente(page: Page):
     txt_idade = Container(Text('Idade: '))
     idade = TextField(label='Insira sua idade...', text_align=TextAlign.LEFT)
     btn_enviar = Container(ElevatedButton('Enviar', height=50, width=110, on_click = complementar), alignment= alignment.center)
-    txt_acerto = Container(Text('Cadastro atualizado com sucesso!'), visible = False, bgcolor=colors.GREEN, padding=10, alignment=alignment.center)
-    txt_erro = Container(Text('Por favor, preencha todos os campos.'), visible=False, bgcolor=colors.RED, padding=10, alignment=alignment.center)
+    txt_acerto = Container(Text('Cadastro atualizado com sucesso!'), visible = False, bgcolor=Colors.GREEN, padding=10, alignment=alignment.center)
+    txt_erro = Container(Text('Por favor, preencha todos os campos.'), visible=False, bgcolor=Colors.RED, padding=10, alignment=alignment.center)
     
 
     return Column(

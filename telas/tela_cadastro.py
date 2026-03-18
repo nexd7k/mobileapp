@@ -81,8 +81,8 @@ def Cadastro(page: Page):
                                       alignment = MainAxisAlignment.CENTER, spacing = 10), on_change= oab_state) #Variavel que da a opção de escolher entre cliente e advogado
     txt_oab = Container(Text('OAB: '), visible=False)
     oab = TextField(label='Insira o número da sua OAB...', text_align=TextAlign.LEFT, visible=False)
-    txt_acerto = Container(Text('Cadastro concluído com sucesso!'), visible=False, bgcolor=colors.GREEN, padding=10, alignment=alignment.center)
-    txt_erro = Container(Text('Login ou senha inválidos'), visible=False, bgcolor=colors.RED, padding=10, alignment=alignment.center)
+    txt_acerto = Container(Text('Cadastro concluído com sucesso!'), visible=False, bgcolor=Colors.GREEN, padding=10, alignment=alignment.center)
+    txt_erro = Container(Text('Login ou senha inválidos'), visible=False, bgcolor=Colors.RED, padding=10, alignment=alignment.center)
 
     return Column(
         [

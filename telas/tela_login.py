@@ -38,7 +38,7 @@ def Login(page: Page):
     txt_senha = Container(Text('Senha:'))
     senha = TextField(label='Insira sua senha...', text_align=TextAlign.LEFT, password=True, can_reveal_password=True)
     btn_entrar = Container(ElevatedButton('Entrar', height=50, width=110, on_click = autenticar), alignment=alignment.center)
-    txt_erro = Container(Text('Login ou senha inválidos'), visible=False, bgcolor=colors.RED, padding=10, alignment=alignment.center)
+    txt_erro = Container(Text('Login ou senha inválidos'), visible=False, bgcolor=Colors.RED, padding=10, alignment=alignment.center)
 
 
     return Column(

@@ -52,8 +52,8 @@ def AtualizarAdvogado(page: Page):
     c_cri = Checkbox(label="Crime", value=False)
     c_hom = Checkbox(label="Homicídio", value=False)
     btn_atualizar = Container(ElevatedButton('Atualizar', height=50, width=110, on_click = atualizar), alignment= alignment.center)
-    txt_acerto = Container(Text('Cadastro atualizado com sucesso!'), visible = False, bgcolor=colors.GREEN, padding=10, alignment=alignment.center)
-    txt_erro = Container(Text('Por favor, preencha todos os campos.'), visible=False, bgcolor=colors.RED, padding=10, alignment=alignment.center)
+    txt_acerto = Container(Text('Cadastro atualizado com sucesso!'), visible = False, bgcolor=Colors.GREEN, padding=10, alignment=alignment.center)
+    txt_erro = Container(Text('Por favor, preencha todos os campos.'), visible=False, bgcolor=Colors.RED, padding=10, alignment=alignment.center)
     
 
     return Column(
